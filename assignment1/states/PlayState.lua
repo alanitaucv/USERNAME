@@ -108,7 +108,7 @@ function PlayState:update(dt)
     end
 
     if love.keyboard.wasPressed('p')  then
-        sounds['music']:stop()
+        sounds['music']:pause()
         sounds['pause']:play()
         gStateMachine:change('pause',  {
             score = self.score,

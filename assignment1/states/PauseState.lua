@@ -18,7 +18,6 @@ end
 function PauseState:update(dt)
  if love.keyboard.wasPressed('p') then
     sounds['pause']:play()
-    sounds['music']:setLooping(true)
     sounds['music']:play()
     gStateMachine:change('play',  {
         score = self.score,
